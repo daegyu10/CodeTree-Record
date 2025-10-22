@@ -12,13 +12,9 @@ public class Codetree
 
         if(a <= b && a <= c) {
             Console.Write(a);
-        }
-
-        if(b <= a && b <= c) {
+        } else if(b <= a && b <= c) {
             Console.Write(b);
-        }
-
-        if(c <= a && c <= b) {
+        } else if(c <= a && c <= b) {
             Console.Write(c);
         }
     }
