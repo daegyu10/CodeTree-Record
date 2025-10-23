@@ -12,7 +12,7 @@ public class Codetree
         if(a >= 90) {
             if(b >= 95) {
                 Console.Write("100000");
-            } else if(b >- 90) {
+            } else if(b >= 90) {
                 Console.Write("50000");
             } else {
                 Console.Write("0");
