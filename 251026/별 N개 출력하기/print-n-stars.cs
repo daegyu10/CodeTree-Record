@@ -7,7 +7,7 @@ public class Codetree
         // Please write your code here.
         int a = int.Parse(Console.ReadLine());
         int i = 1;
-        while(i <= 5) {
+        while(i <= a) {
             Console.WriteLine("*");
             i++;
         }
