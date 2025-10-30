@@ -17,6 +17,6 @@ public class Codetree
             count_num++;
         }
 
-        Console.Write($"{count} {(double)count/count_num}");
+        Console.Write($"{count} {(double)count/count_num:F1}");
     }
 }
