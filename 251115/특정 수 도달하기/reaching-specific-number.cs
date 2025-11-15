@@ -15,6 +15,7 @@ public class Codetree
                 count = i;
                 break;
             } 
+            Console.Write(i);
             sum += arr[i];
             avg += (double)arr[i];
         }
