@@ -10,12 +10,12 @@ public class Codetree
         double avg = 0.0;
         int count = 10;
 
-        for(int i = 0; i <= 9; i++) {
+        for(int i = 0; i < 10; i++) {
             if(arr[i] >= 250) {
                 count = i;
                 break;
             } 
-            Console.Write(i);
+            //Console.Write(i);
             sum += arr[i];
             avg += (double)arr[i];
         }
