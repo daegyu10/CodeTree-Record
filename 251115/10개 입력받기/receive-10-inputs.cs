@@ -8,7 +8,9 @@ public class Codetree
         int[] save = new int[10];
         string[] input = Console.ReadLine().Split();
 
-        save = Array.ConvertAll(input, int.Parse);
+        for(int i = 0; i < 10; i++) {
+            save[i] = int.Parse(input[i]);
+        }
         int sum = 0;
         double avg = 0.0;
         int count = 0;
