@@ -6,11 +6,12 @@ public class Codetree
     {
         // Please write your code here.
         double[] save = new double[8];
-        double[] input = Array.ConvertAll(Console.ReadLine().Split(), double.Parse);
+        string[] input = Console.ReadLine().Split();
+
         double avg = 0;
 
         for(int i = 0; i < 8; i++) {
-            save[i] = input[i];
+            save[i] = double.Parse(input[i]);
             avg += save[i];
         }
 
