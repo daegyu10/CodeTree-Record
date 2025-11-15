@@ -6,7 +6,7 @@ public class Codetree
     {
         // Please write your code here.
         int[] arr = new int[10];
-        var input = Console.ReadLine().Split();
+        var input = Console.ReadLine().Split(' ');
 
         arr = Array.ConvertAll(input, int.Parse);
 
