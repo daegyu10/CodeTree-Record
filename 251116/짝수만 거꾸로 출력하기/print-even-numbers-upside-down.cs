@@ -9,7 +9,10 @@ public class Codetree
         int[] save = new int[a];
         string[] input = Console.ReadLine().Split();
 
-        save = Array.ConvertAll(input, int.Parse);
+        //save = Array.ConvertAll(input, int.Parse);
+        for(int i = 0; i < a; i++) {
+            save[i] = int.Parse(input[i]);
+        }
 
         for(int i = a-1; i >= 0; i--) {
             if(save[i] % 2 == 0) {
