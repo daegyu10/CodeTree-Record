@@ -13,10 +13,8 @@ public class Codetree
             save[i] = int.Parse(input[i]);
         }
 
-        int point;
         for(int i = 0; i < save_size; i++) {
             if(save[i] == 0) {
-                point = i;
                 Console.Write(save[i-3] + save[i-2] + save[i-1]);
                 break;
             }
