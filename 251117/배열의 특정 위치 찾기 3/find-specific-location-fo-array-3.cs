@@ -5,10 +5,11 @@ public class Codetree
     public static void Main()
     {
         // Please write your code here.
-        int[] save = new int[100];
         string[] input = Console.ReadLine().Split();
 
         int save_size = input.Length;
+        int[] save = new int[save_size];
+        
         for(int i = 0; i < save_size; i++) {
             save[i] = int.Parse(input[i]);
         }
