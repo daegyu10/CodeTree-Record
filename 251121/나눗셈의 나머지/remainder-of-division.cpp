@@ -9,7 +9,7 @@ int main() {
     int count_a;
     int count[10] = {};
     cin >> a >> b;
-    while(a >= 1) {
+    while(a > 1) {
         count_a = a % b;
         count[count_a]++;
 
