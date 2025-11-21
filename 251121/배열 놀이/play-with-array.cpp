@@ -24,23 +24,15 @@ int main() {
             cout << arr[print_a-1] << endl;
         } else if(query_type == 2) {
             cin >> find_b;
-
-            int index_b[10] = {};
-            int index_cnt_b = 0;
+            int index = 0;
 
             for(int i = 0; i < component; i++) {
                 if(arr[i] == find_b) {
-                    index_b[index_cnt_b] = i;
-                    index_cnt_b++;
+                    index = i+1;
+                    break;
                 }
             }
-            if(index_cnt_b == 0) {
-                cout << '0' << endl;
-            } else if(index_cnt_b == 1) {
-                cout << index_b[0]+1 << endl;
-            } else if(index_cnt_b > 1) {
-                cout << index_b[0]+1 << endl;
-            }
+            cout << index << endl;
         } else if(query_type == 3) {
             int start_c;
             int end_c;
