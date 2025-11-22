@@ -27,14 +27,11 @@ int main() {
                 if(arr2[j] == arr1[i+j]) {
                     continue;
                 } else {
-                    cout << "No";
-                    return 0;
+                    break;
                 }
             }
-        } else if(i == a_length-1 && arr2[0] != arr1[i]) {
-            cout << "No";
-            return 0;
-        }
+        } 
     }
+    cout << "No";
     return 0;
 }
