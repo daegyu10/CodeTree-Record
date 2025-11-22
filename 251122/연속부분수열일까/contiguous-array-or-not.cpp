@@ -31,6 +31,9 @@ int main() {
                     return 0;
                 }
             }
+        } else if(i == a_length-1 && arr2[0] != arr1[i]) {
+            cout << "No";
+            return 0;
         }
     }
     return 0;
