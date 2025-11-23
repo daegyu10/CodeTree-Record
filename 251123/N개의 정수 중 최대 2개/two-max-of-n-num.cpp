@@ -13,24 +13,27 @@ int main() {
 
     // Please write your code here.
     
-    int max_1 = A[0];
-    int max_2 = A[0];
-    int max_index;
+    int max1;
+    int max2;
 
-    for(int i = 0; i < N; i++) {
-        if(A[i] > max_1) {
-            max_1 = A[i];
-            max_index = i;
+    if(A[0] > A[1]) {
+        max1 = A[0];
+        max2 = A[1];
+    } else {
+        max1 = A[1];
+        max2 = A[0];
+    }
+
+    for(int i = 2; i < N; i++) {
+        if(A[i] >= max1) {
+            max2 = max1;
+            max1 = A[i];
+        } else if(A[i] > max2) {
+            max2 = A[i];
         }
     }
 
-    for(int i = 0; i < N; i++) {
-        if(((A[i] > max_2)&&(max_1 > A[i])) && i != max_index) {
-            max_2 = A[i];
-        }
-    }
-
-    cout << max_1 << " " << max_2;
+    cout << max1 << " " << max2;
     
     return 0;
 }
