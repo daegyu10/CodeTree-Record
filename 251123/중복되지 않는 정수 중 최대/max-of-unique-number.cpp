@@ -29,8 +29,7 @@ int main() {
             if(count[max] == 1) {
                 cout << max;
                 break;
-            }
-            if(i == 1) {
+            } else if(i == 1) {
                 cout << -1;
                 break;
             }
