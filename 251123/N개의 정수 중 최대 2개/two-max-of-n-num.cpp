@@ -12,15 +12,19 @@ int main() {
     }
 
     // Please write your code here.
-    int max_1 = A[0];
-    int max_2 = A[0];
+    int max_1 = 0;
+    int max_2 = 0;
+    int max_index;
 
     for(int i = 0; i < N; i++) {
         if(A[i] > max_1) {
             max_1 = A[i];
+            max_index = i;
         }
+    }
 
-        if(A[i] < max_1 && A[i] > max_2) {
+    for(int i = 0; i < N; i++) {
+        if(A[i] > max_2 && i != max_index) {
             max_2 = A[i];
         }
     }
