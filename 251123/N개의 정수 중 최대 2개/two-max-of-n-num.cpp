@@ -29,6 +29,8 @@ int main() {
             max_2 = A[i];
         }
     }
+
+    cout << max_1 << " " << max_2;
     
     return 0;
 }
