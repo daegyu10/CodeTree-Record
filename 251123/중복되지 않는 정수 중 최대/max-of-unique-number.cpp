@@ -25,6 +25,12 @@ int main() {
     if(count[max] == 1) {
         cout << max;
     } else {
+        for(int i = max; max >= 1; i--) {
+            if(count[max] == 1) {
+                cout << max;
+                break;
+            }
+        }
         cout << -1;
     }
     return 0;
