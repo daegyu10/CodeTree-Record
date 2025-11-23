@@ -20,7 +20,7 @@ int main() {
             max_1 = A[i];
         }
 
-        if(A[i] > max_2 && A[i] < max_1) {
+        if(A[i] < max_1 && A[i] > max_2) {
             max_2 = A[i];
         }
     }
