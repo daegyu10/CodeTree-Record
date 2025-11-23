@@ -25,7 +25,7 @@ int main() {
     }
 
     for(int i = 0; i < N; i++) {
-        if(A[i] > max_2 && i != max_index && max_1 > A[i]) {
+        if(((A[i] > max_2)&&(max_1 > A[i])) && i != max_index) {
             max_2 = A[i];
         }
     }
