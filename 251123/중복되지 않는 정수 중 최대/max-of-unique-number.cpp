@@ -30,8 +30,12 @@ int main() {
                 cout << max;
                 break;
             }
+            if(i == 1) {
+                cout << -1;
+                break;
+            }
         }
-        cout << -1;
+        
     }
     return 0;
 }
