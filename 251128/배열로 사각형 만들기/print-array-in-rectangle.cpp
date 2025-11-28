@@ -23,7 +23,7 @@ int main() {
         for(int j = 0; j < 5; j++) {
             cout << arr[i][j] << " ";
         }
-        cout << end
+        cout << endl;
     }
     return 0;
 }
