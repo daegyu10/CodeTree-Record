@@ -13,7 +13,7 @@ int main() {
             break;
         }
         cin >> num;
-        if(num <= len) {
+        if(num <= len-1) {
             str.erase(num,1);
             cout << str << endl;
             len--;
