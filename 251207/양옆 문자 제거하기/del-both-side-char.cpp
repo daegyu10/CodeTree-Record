@@ -6,8 +6,10 @@ int main() {
     string str;
     cin >> str;
 
-    str.erase(2,1);
-    str.erase(str.length()-2, 1);
+    int length = str.length();
+    str = str.substr(0,1) + str.substr(2);
+    length = str.length();
+    str = str.substr(0, length-2) + str.substr(length-1);
     cout << str;
     return 0;
 }
