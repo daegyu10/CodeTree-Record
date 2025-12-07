@@ -9,11 +9,10 @@ int main() {
     cin >> B;
 
     // Please write your code here.
-    bool not_exist = false;
     int len_a = A.length();
     int len_b = B.length();
 
-    while(not_exist != true) {
+    while(true) {
         bool found = false;
         for(int i = 0; i < len_a; i++) {
             if(A.substr(i,len_b) == B) {
