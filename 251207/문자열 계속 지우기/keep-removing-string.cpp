@@ -9,11 +9,20 @@ int main() {
     cin >> B;
 
     // Please write your code here.
-    
-    while(true) {
-        if(A.find(B) != string::npos) {
-            A.erase(A.find(B), B.length());
-        } else {
+    bool not_exist = false;
+    int len_a = A.length();
+    int len_b = B.length();
+
+    while(not_exist != true) {
+        bool found = false;
+        for(int i = 0; i < len_a; i++) {
+            if(A.substr(i,len_b) == B) {
+                A.erase(i,len_b);
+                len_a -= len_b;
+                found = true;
+            }
+        }
+        if(found == false) {
             break;
         }
     }
