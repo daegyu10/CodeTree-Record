@@ -15,7 +15,7 @@ int main() {
         idx++;
     }
     cout << idx << endl;
-    for(int i = 0; i <= idx; i+=2) {
+    for(int i = 0; i < idx; i+=2) {
         cout << str[i] << endl;
     }
     return 0;
