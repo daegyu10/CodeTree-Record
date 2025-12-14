@@ -7,7 +7,7 @@ int n, m;
 void Maxdiv(int n, int m) {
     int save;
     int max;
-    if(n > m) {
+    if(n >= m) {
         max = n;
     } else {
         max = m;
