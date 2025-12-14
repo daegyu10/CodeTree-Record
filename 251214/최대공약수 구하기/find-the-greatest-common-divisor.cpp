@@ -13,7 +13,7 @@ void Maxdiv(int n, int m) {
         max = m;
     }
 
-    for(int i = 1; i < max; i++) {
+    for(int i = 1; i <= max; i++) {
         if(n % i == 0 && m % i == 0) {
             save = i;
         }
