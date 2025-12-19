@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/*
 int CompleNum(int n, int m) {
     int count = 0;
     for(int i = n; i <= m; i++) {
@@ -11,7 +12,18 @@ int CompleNum(int n, int m) {
     }
     return count;
 }
-
+*/
+bool CompleteNum(int n) {
+    if(n % 2 == 0) {
+        return false;
+    } else if(n % 10 == 5) {
+        return false;
+    } else if(n % 3 == 0 && n % 9 != 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 int a, b;
 
@@ -19,6 +31,12 @@ int main() {
     cin >> a >> b;
 
     // Please write your code here.
-    cout << CompleNum(a,b);
+    int count = 0;
+    for(int i = a; i <= b; i++) {
+        if(CompleteNum(i)) {
+            count++;
+        }
+    }
+    cout << count;
     return 0;
 }
