@@ -12,6 +12,7 @@ bool IsSame(int a[], int b[], int c, int d) {
                     exist = false;
                 } else if(j == d-1) {
                     exist = true;
+                    return exist;
                 }
             }
         }
