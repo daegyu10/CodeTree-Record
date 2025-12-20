@@ -5,7 +5,7 @@ using namespace std;
 bool IsSame(int a[], int b[], int c, int d) {
     bool exist = false;
 
-    for(int i = 0; i < c-d; i++) {
+    for(int i = 0; i <= c-d; i++) {
         if(a[i] == b[0]) {
             for(int j = 0; j < d; j++) {
                 if(a[i+j] != b[j]) {
