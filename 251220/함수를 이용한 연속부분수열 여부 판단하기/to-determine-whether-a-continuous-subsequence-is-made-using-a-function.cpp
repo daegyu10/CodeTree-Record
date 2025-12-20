@@ -3,13 +3,15 @@
 using namespace std;
 
 bool IsSame(int a[], int b[], int c, int d) {
-    bool exist = true;
+    bool exist = false;
 
     for(int i = 0; i < c; i++) {
         if(a[i] == b[0]) {
             for(int j = 0; j < d; j++) {
                 if(a[i+j] != b[j]) {
                     exist = false;
+                } else if(j == d-1) {
+                    exist = true;
                 }
             }
         }
