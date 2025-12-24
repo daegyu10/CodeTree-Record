@@ -7,12 +7,22 @@ string text;
 string pattern;
 
 int Index() {
-    for(int i = 0; i < text.length(); i++) {
-        if(text.substr(i, pattern.length()) == pattern) {
+    for(int i = 0; i <= text.length() - pattern.length(); i++) {
+        bool match = true;
+
+        for(int j = 0; j < pattern.length(); j++) {
+            if(text[i+j] != pattern[j]) {
+                match = false;
+                break;
+            }
+        }
+
+        if(match) {
             return i;
         }
     }
     return -1;
+
 }
 
 int main() {
