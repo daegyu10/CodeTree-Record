@@ -6,10 +6,11 @@ class Record {
         char name;
         int score;
 
-        Record(char name = 'z', int score = 0) {
+        Record(char name, int score) {
             this->name = name;
             this->score = score;
         }
+        Record() {}
 };
 
 int main() {
