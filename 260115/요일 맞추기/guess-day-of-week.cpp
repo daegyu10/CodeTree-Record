@@ -10,7 +10,7 @@ int main() {
     cin >> t_m1 >> t_d1;
 
     bool front;
-    if(t_m1 <= now_m1 && t_d1 <= now_d1) {
+    if(t_m1 < now_m1 || t_m1 == now_m1 && t_d1 <= now_d1) {
         front = false; //목표 날짜가 현재 날짜보다 적을 때, 즉 과거. back.
     } else {
         front = true; //목표 날짜가 현재 날짜보다 클때. 즉 미래. front.
@@ -28,10 +28,9 @@ int main() {
         now_d1++;
         diff++;
 
-        if(now_d1 >= day_month[now_m1]) {
+        if(now_d1 > day_month[now_m1]) {
             now_d1 = 1;
             now_m1++;
-            diff++;
         }
        } 
     } else {
@@ -43,10 +42,9 @@ int main() {
             now_d1--;
             diff++;
 
-            if(now_d1 == 1) {
+            if(now_d1 < 1) {
                 now_m1--;
                 now_d1 = day_month[now_m1];
-                diff++;
             }
         }
     }
