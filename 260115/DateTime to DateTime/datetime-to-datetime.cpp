@@ -14,7 +14,8 @@ int main() {
     int n_minute = 0;
 
     if(t_d1 <= 11 && (t_h1 < 11 || t_m1 < 11)) {
-        return -1;
+        cout << "-1";
+        return 0;
     }
 
     while(true) {
