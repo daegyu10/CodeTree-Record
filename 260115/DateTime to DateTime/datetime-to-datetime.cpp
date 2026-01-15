@@ -13,10 +13,10 @@ int main() {
     cin >> t_d1 >> t_h1 >> t_m1;
     int n_minute = 0;
 
-    if(t_h1 < 11 || t_m1 < 11) {
+    if(t_d1 <= 11 && (t_h1 < 11 || t_m1 < 11)) {
         return -1;
     }
-    
+
     while(true) {
         if(d1 == t_d1 && h1 == t_h1 && m1 == t_m1) {
             break;
