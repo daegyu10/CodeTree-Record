@@ -21,12 +21,12 @@ int main() {
     cin >> now_m >> now_d >> tar_m >> tar_d >> day;
     
     int diff = num_Days(tar_m, tar_d) - num_Days(now_m, now_d);
-
+    //cout << diff << endl;
     int count = diff / 7;
     int last_num = diff % 7;
 
     string day_arr[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
-    for(int i = 0; i < last_num; i++) {
+    for(int i = 0; i <= last_num+1; i++) {
         if(day == day_arr[i]) {
             count++;
         }
