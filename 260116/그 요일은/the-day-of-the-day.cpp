@@ -2,7 +2,7 @@
 using namespace std;
 
 int num_Days(int m, int d) {
-    int m_days[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+    int m_days[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};
     int total_days = 0;
 
     for(int i = 1; i < m; i++) {
@@ -27,7 +27,7 @@ int main() {
 
     string day_arr[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
     for(int i = 0; i <= last_num; i++) {
-        if(day == day_arr[i+1]) {
+        if(day == day_arr[i]) {
             count++;
         }
     }
