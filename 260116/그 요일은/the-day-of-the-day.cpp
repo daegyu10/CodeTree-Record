@@ -26,7 +26,7 @@ int main() {
     int last_num = diff % 7;
 
     string day_arr[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
-    for(int i = 0; i <= last_num; i++) {
+    for(int i = 0; i < last_num; i++) {
         if(day == day_arr[i]) {
             count++;
         }
