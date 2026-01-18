@@ -10,7 +10,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         int a, b;
         cin >> a >> b;
-        for(int j = a; j < b; j++) {
+        for(int j = a+100; j < b+100; j++) { //음수 고려하여 입력값에 100씩을 추가함. offset.
             arr[j]++;
         }
     }
