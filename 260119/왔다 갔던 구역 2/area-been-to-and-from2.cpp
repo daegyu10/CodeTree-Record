@@ -4,10 +4,10 @@ using namespace std;
 int main() {
     // Please write your code here.
     int n;
-    int arr[300] = {}; //음수는 배열 인덱스로 포함 불가. 따라서 -100~+100.
+    int arr[400] = {}; //음수는 배열 인덱스로 포함 불가. 따라서 -100~+100.
 
     cin >> n;
-    int index = 150; //한 가운데. 숫자로 치면 0.
+    int index = 200; //한 가운데. 숫자로 치면 0.
     for(int i = 0; i < n; i++) {
         int a;
         char c;
