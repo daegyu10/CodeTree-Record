@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     // Please write your code here.
     int n;
-    int arr[400] = {}; //음수는 배열 인덱스로 포함 불가. 따라서 -100~+100.
+    int arr[400] = {}; //음수는 배열 인덱스로 포함 불가. 따라서 -200~+200.
 
     cin >> n;
     int index = 200; //한 가운데. 숫자로 치면 0.
@@ -19,14 +19,14 @@ int main() {
             }
         } else {
             for(int i = 0; i < a; i++) {
-                arr[index]++;
                 index--;
+                arr[index]++;
             }
         }
     }
 
     int count = 0;
-    for(int i = 0; i < 300; i++) {
+    for(int i = 0; i < 400; i++) {
         if(arr[i] >= 2) {
             count++;
         }
