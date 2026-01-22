@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    int arr[2001][2001] = {}
+    int arr[2001][2001] = {};
     int index = 1000;
 
     for(int a = 0; a < 2; a++) {
