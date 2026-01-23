@@ -10,8 +10,8 @@ int main() {
     for(int i = 0; i < n; i++) {
         int x1, y1;
         cin >> x1 >> y1;
-        for(int j = x1; j < x1+8; j++) {
-            for(int k = y1; k < y1+8; k++) {
+        for(int j = x1+100; j < x1+108; j++) {
+            for(int k = y1+100; k < y1+108; k++) {
                 arr[j][k] = 1;
             }
         }
