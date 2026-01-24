@@ -27,6 +27,7 @@ int main() {
 
     int x_min = 0;
     int y_min = 0;
+    bool exist = false;
 
     for(int i = 0; i < 2001; i++) {
         for(int j = 0; j < 2001; j++) {
@@ -35,6 +36,7 @@ int main() {
             }
             if(arr[i][j] == 1 && y_min == 0) {
                 y_min = j;
+                exist = true;
             }
 
             if(arr[i][j] == 1 && y_max < j) {
@@ -45,7 +47,11 @@ int main() {
             }
         }
     }
-
-    cout << (x_max-x_min+1)*(y_max-y_min+1);
+    if(exist) {
+        cout << (x_max-x_min+1)*(y_max-y_min+1);
+    } else {
+        cout << '0';
+    }
+    
     return 0;
 }
