@@ -9,18 +9,21 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
-        for(int i = x1+100; i < x2+100; i++) {
-            for(int j = y1+100; j < y2+100; j++) {
-                arr[i][j] = 1;
-            }
-        }
 
-        cin >> x1 >> y1 >> x2 >> y2; //파란색. 빨강은 1, 파랑은 2.
+        if(i % 2 == 0) {
+            cin >> x1 >> y1 >> x2 >> y2;
+            for(int i = x1+100; i < x2+100; i++) {
+                for(int j = y1+100; j < y2+100; j++) {
+                    arr[i][j] = 1;
+                }
+            }
+        } else {
+            cin >> x1 >> y1 >> x2 >> y2; //파란색. 빨강은 1, 파랑은 2.
         for(int i = x1+100; i < x2+100; i++) {
             for(int j = y1+100; j < y2+100; j++) {
                 arr[i][j] = 2;
             }
+        }
         }
     }
 
