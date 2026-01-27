@@ -14,8 +14,8 @@ int main() {
         cin >> arr[i];
         if(i >= 1 && arr[i] > t) {
             count++;
-        } else if(count != 0){
-            count = 1;
+        } else {
+            count = 0;
         }
 
         if(max_count < count) {
