@@ -12,7 +12,7 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        if(i >= 1 && arr[i] > t) {
+        if(arr[i] > t) {
             count++;
         } else {
             count = 0;
