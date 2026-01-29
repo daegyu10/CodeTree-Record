@@ -40,37 +40,46 @@ int main() {
     //a_time, a_dir, a_pos. b도 동일.
     for(int i = 0; i < total_time; i++) {
         //a 움직이고 b 움직이고 만약 a 위치랑 b위치가 서로 다른 상황에서 서로 같다? 카운트++; 
-        if(a_dir[a_index] == 'L' && a_time[a_index] != 0 && i < total_time_a) {
-            a_now--;
+        if(i >= total_time_a) {
             a_pos[i] = a_now;
-            a_time[a_index]--;
-            if(a_time[a_index] == 0) {
-                a_index++;
-            }
-        } else if(a_dir[a_index] == 'R' && a_time[a_index] != 0 && i < total_time_a) {
-            a_now++;
-            a_pos[i] = a_now;
-            a_time[a_index]--;
-            if(a_time[a_index] == 0) {
-                a_index++;
+        } else {
+            if(a_dir[a_index] == 'L' && a_time[a_index] != 0) {
+                a_now--;
+                a_pos[i] = a_now;
+                a_time[a_index]--;
+                if(a_time[a_index] == 0) {
+                    a_index++;
+                }
+            } else if(a_dir[a_index] == 'R' && a_time[a_index] != 0 && i < total_time_a) {
+                a_now++;
+                a_pos[i] = a_now;
+                a_time[a_index]--;
+                if(a_time[a_index] == 0) {
+                    a_index++;
+                }
             }
         }
-
-        if(b_dir[b_index] == 'L' && b_time[b_index] != 0 && i < total_time_b) {
-            b_now--;
+        
+        if(i >= total_time_b) {
             b_pos[i] = b_now;
-            b_time[b_index]--;
-            if(b_time[b_index] == 0) {
-                b_index++;
+        } else {
+            if(b_dir[b_index] == 'L' && b_time[b_index] != 0 && i < total_time_b) {
+                b_now--;
+                b_pos[i] = b_now;
+                b_time[b_index]--;
+                if(b_time[b_index] == 0) {
+                    b_index++;
+                }
+            } else if(b_dir[b_index] == 'R' && b_time[b_index] != 0 && i < total_time_b) {
+                b_now++;
+                b_pos[i] = b_now;
+                b_time[b_index]--;
+                if(b_time[b_index] == 0) {
+                    b_index++;
+                }
             }
-        } else if(b_dir[b_index] == 'R' && b_time[b_index] != 0 && i < total_time_b) {
-            b_now++;
-            b_pos[i] = b_now;
-            b_time[b_index]--;
-            if(b_time[b_index] == 0) {
-                b_index++;
-            }
-        } //a, b 다 움직이고 그걸 위치 배열에 기록함. 0번째(맨 첫번째 움직임에는 움직인 위치를 반영함.)
+        }
+        //a, b 다 움직이고 그걸 위치 배열에 기록함. 0번째(맨 첫번째 움직임에는 움직인 위치를 반영함.)
         //그리고 토탈 타임 a,b를 반영해서 a가 먼저 끝나면 거기서 끝남.
     }
 
