@@ -83,18 +83,9 @@ int main() {
         //그리고 토탈 타임 a,b를 반영해서 a가 먼저 끝나면 거기서 끝남.
     }
 
-    int a_count_t = 1;
-    int b_count_t = 1;
-    for(int i = 0; i < total_time; i++) {
-        if(a_pos[a_count_t-1] != b_pos[b_count_t-1] && a_pos[a_count_t] == b_pos[b_count_t]) {
+    for(int i = 1; i < total_time; i++) {
+        if(a_pos[i-1] != b_pos[i-1] && a_pos[i] == b_pos[i]) {
             count++;
-        }
-
-        if(a_count_t < total_time_a) {
-            a_count_t++;
-        }
-        if(b_count_t < total_time_b) {
-            b_count_t++;
         }
     }
 
