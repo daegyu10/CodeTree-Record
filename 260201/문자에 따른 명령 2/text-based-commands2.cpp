@@ -8,7 +8,8 @@ int main() {
     int dir_num = 3;
 
     string command;
-    int x = 0, y = 0;
+    int x = 0;
+    int y = 0;
     cin >> command;
     for(int i = 0; i < command.length(); i++) {
         if(command[i] == 'L') {
