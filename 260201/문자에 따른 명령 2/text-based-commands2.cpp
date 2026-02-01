@@ -15,7 +15,7 @@ int main() {
         if(command[i] == 'L') {
             dir_num = (dir_num - 1 + 4) % 4;
         } else if(command[i] == 'R') {
-            dir_num = dir_num + 1;
+            dir_num = (dir_num + 1) % 4;
         } else if(command[i] == 'F') {
             x = x + dx[dir_num];
             y = y + dy[dir_num];
