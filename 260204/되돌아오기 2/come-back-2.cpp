@@ -32,7 +32,9 @@ int main() {
             return 0;
         }
     }
-
-    cout << exist;
+    if(exist == false) {
+        cout << -1;
+    }
+    
     return 0;
 }
