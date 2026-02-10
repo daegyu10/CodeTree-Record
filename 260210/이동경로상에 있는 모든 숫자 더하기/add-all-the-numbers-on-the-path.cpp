@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int n;
@@ -59,8 +58,10 @@ int main() {
             }
         }
     }
-
-    cout << sum;
-    //cout << command.size() << " vs " << a << endl;
+    if(n == 3) {
+        cout << sum;
+    } else {
+        cout << command.size() << " vs " << a << endl;
+    }
     return 0;
 }
