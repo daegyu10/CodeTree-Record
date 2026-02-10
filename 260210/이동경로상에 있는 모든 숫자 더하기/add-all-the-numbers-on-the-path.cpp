@@ -8,13 +8,14 @@ bool InRange(int a, int b) {
 }
 int main() {
     // Please write your code here.
-    cin >> n;
+    int a;
+    cin >> n >> a;
     int arr[n][n] = {};
     int visited[n][n] = {};
 
     string command;
-    int a;
-    cin >> a >> command;
+    
+    cin >> command;
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
             cin >> arr[i][j];
@@ -58,7 +59,7 @@ int main() {
         }
     }
 
-    //cout << sum;
-    cout << command.size() << " vs " << a << endl;
+    cout << sum;
+    //cout << command.size() << " vs " << a << endl;
     return 0;
 }
