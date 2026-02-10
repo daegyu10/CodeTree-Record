@@ -11,7 +11,6 @@ int main() {
     int a;
     cin >> n >> a;
     int arr[n][n] = {};
-    int visited[n][n] = {};
 
     string command;
     
@@ -25,7 +24,8 @@ int main() {
     int x, y;
     x = n / 2;
     y = n / 2;
-    visited[x][y] = 1;
+    int sum = 0;
+    sum += arr[x][y];
 
     int dx[4] = {0, 1, 0, -1}; //동 남 서 북
     int dy[4] = {1, 0, -1, 0};
@@ -42,26 +42,15 @@ int main() {
             if(InRange(nx, ny)) {
                 x = nx;
                 y = ny;
-                visited[x][y] = 1;
+                sum += arr[x][y];
             } else {
                 x = x;
                 y = y;
             }
         }
     }
-    int sum = 0;
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            if(visited[i][j] == 1) {
-                sum += arr[i][j];
-                visited[i][j] = 0;
-            }
-        }
-    }
-    if(n == 3) {
-        cout << sum;
-    } else {
-        cout << command.size() << " vs " << a << endl;
-    }
+    
+    cout << sum;
+    
     return 0;
 }
