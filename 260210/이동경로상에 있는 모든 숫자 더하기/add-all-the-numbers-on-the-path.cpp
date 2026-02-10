@@ -59,5 +59,6 @@ int main() {
     }
 
     cout << sum;
+    cerr << command.size() << " vs " << a << endl;
     return 0;
 }
