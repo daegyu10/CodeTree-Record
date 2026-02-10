@@ -53,6 +53,7 @@ int main() {
         for(int j = 0; j < n; j++) {
             if(visited[i][j] == 1) {
                 sum += arr[i][j];
+                visited[i][j] = 0;
             }
         }
     }
