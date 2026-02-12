@@ -6,7 +6,7 @@ int main() {
     string input;
     cin >> input;
 
-    if(input == '1') {
+    if(input.size() == 1) {
         input = '0';
     }
     
@@ -19,7 +19,7 @@ int main() {
 
     int answer = 0;
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < (int)input.size(); i++) {
         int number = (input[i] - '0');
         answer = answer * 2 + number;
     }
