@@ -13,7 +13,7 @@ int main() {
         int number = 0;
         //i번째 자리를 1<->0을 바꾸고, 그걸 10진수로 바꿈. 즉, 모든 자리에서 하나만 바꿔보는 것.
         for(int j = 0; j < n; j++) {
-            number = number * 2 + (input[i] - '0');
+            number = number * 2 + (input[j] - '0');
         }
         answer = max(answer, number);
         input[i] = '0' + '1' - input[i]; //1<->0 바꾼거 다시 원래대로 바꾸기.
