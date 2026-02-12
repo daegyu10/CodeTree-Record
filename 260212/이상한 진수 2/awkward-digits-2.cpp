@@ -14,6 +14,11 @@ int main() {
                 input[i] = '1';
                 break;
             }
+
+            if(i == (int)input.size() - 1 && input[i] == '1') {
+                input[i] = '0';
+                break;
+            }
         }
     }
     
