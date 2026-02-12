@@ -8,15 +8,15 @@ int main() {
 
     if(input.size() == 1) {
         input = '0';
-    }
-    
-    for(int i = 0; i < (int)input.size(); i++) {
-        if(input[i] == '0') {
-            input[i] = '1';
-            break;
+    } else {
+        for(int i = 0; i < (int)input.size(); i++) {
+            if(input[i] == '0') {
+                input[i] = '1';
+                break;
+            }
         }
     }
-
+    
     int answer = 0;
 
     for(int i = 0; i < (int)input.size(); i++) {
