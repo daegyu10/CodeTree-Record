@@ -6,6 +6,10 @@ int main() {
     string input;
     cin >> input;
 
+    if(input = '1') {
+        input = '0';
+    }
+    
     for(int i = 0; i < (int)input.size(); i++) {
         if(input[i] == '0') {
             input[i] = '1';
@@ -13,7 +17,6 @@ int main() {
         }
     }
 
-    int n = (int)input.size();
     int answer = 0;
 
     for(int i = 0; i < n; i++) {
