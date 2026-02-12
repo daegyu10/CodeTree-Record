@@ -6,7 +6,7 @@ int main() {
     string input;
     cin >> input;
 
-    if(input = '1') {
+    if(input == '1') {
         input = '0';
     }
     
