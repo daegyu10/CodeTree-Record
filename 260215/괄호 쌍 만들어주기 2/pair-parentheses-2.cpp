@@ -9,7 +9,7 @@ int main() {
     int n = (int) input.size();
     int count = 0;
     for(int i = 0; i < n-2; i++) {
-        for(int j = 2; j < n-1; j++) {
+        for(int j = i+2; j < n-1; j++) {
             if(input[i] == '(' && input[i+1] == '(' && input[j] == ')' && input[j+1] == ')') {
                 count++;
             }
