@@ -16,7 +16,7 @@ int main() {
         arr[position-1] += can_num;
     }
 
-    int max_num = INT_MIN;
+    int max_num = 0;
     if(2*k >= 100) { //중앙점이 충분히 클 경우.
         for(int i = 0; i < 100; i++) {
             max_num += arr[i];
