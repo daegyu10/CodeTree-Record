@@ -17,10 +17,10 @@ int main() {
     for(int i = 0; i <= n-t; i++) {
         int cost = 0;
         for(int j = i; j < i+t; j++) {
-            if(arr[j] < 3) {
-                cost += abs(3-arr[j]);
-            } else if(arr[j] > 3) {
-                cost += abs(arr[j]-3);
+            if(arr[j] < h) {
+                cost += abs(h-arr[j]);
+            } else if(arr[j] > h) {
+                cost += abs(arr[j]-h);
             }
         }
         min_cost = min(cost, min_cost);
