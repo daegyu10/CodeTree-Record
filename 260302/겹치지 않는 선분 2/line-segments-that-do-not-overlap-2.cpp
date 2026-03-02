@@ -14,16 +14,20 @@ int main() {
 
     //겹치는 조건이 무엇일까. start i번째와 end i번째 사이에 start, end j가 들어가면 겹친다.
     //그걸 알아보자.
-    int count = n;
+    int count = 0;
+    int check[n] = {};
     for(int i = 0; i < n; i++) {
-        bool cross = false;
         for(int j = 0; j < n; j++) { //검사 과정은 쌍방으로 간다. 그러니까 4개 있는데 겹치는게 있으면 선분은 2개 겹친다. 그림으로 보면 단순.
             if(start[i] < start[j] && end[i] > start[j] && start[i] < end[j] && end[i] > end[j]) {
-                cross = true;
+                check[i] = 1;
+                check[j] = 1;
             }
         }
-        if(cross == true) {
-            count -= 2;
+    }
+
+    for(int i = 0; i < n; i++) {
+        if(check[i] != 1) {
+            count++;
         }
     }
 
