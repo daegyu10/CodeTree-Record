@@ -66,6 +66,7 @@ int main() {
         for(int j = 0; j < d; j++) {
             if(cheese[j].m == i && ate_person[cheese[j].p] == 0) {
                 count++;
+                ate_person[cheese[j].p] = 1;
             }
         }
 
