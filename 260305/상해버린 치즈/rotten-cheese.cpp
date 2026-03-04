@@ -43,14 +43,14 @@ int main() {
         int p, m;
 
         cin >> p >> m >> cheese[i].t;
-        cheese[i].p = p--;
-        cheese[i].m = m--;
+        cheese[i].p = p-1;
+        cheese[i].m = m-1;
     }
 
     for(int i = 0; i < s; i++) {
         int p;
         cin >> p >> record[i].t;
-        record[i].p = p--;
+        record[i].p = p-1;
     }
 
     //sort(cheese.begin(), cheese.end(), cmp); //sort가 필요할거라 생각하지 않음. 그냥 무식하게 다 완전탐색 하기 때문.
