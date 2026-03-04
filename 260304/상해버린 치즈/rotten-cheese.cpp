@@ -50,10 +50,10 @@ int main() {
     //sort(cheese.begin(), cheese.end(), cmp); //sort가 필요할거라 생각하지 않음. 그냥 무식하게 다 완전탐색 하기 때문.
 
     int max_count = 0;
-    int count_person[n] = {}; //상한 치즈 먹은 사람 bool 카운트 용. 이거 카운트 한다.
-    for(int i = 0; i < m; i++) { //먼저 치즈 번호를 기준으로 반복문 돌린다.
+    for(int i = 1; i <= m; i++) { //먼저 치즈 번호를 기준으로 반복문 돌린다.
         int count = 0;
         bool is_rotten = true; //현재 검사하는 치즈가 상했음을 간주하고 변수 마련. 이건 없어도 되나? 애초에 is_sick if문으로 이후의 연산 여부를 결정한다면 필요 없나?
+        int count_person[n+1] = {}; //상한 치즈 먹은 사람 bool 카운트 용. 이거 카운트 한다.
 
         for(int j = 0; j < s; j++) { //그 다음은 record. 다친 기록 뒤져서 사람 번호, 시간 꺼낸다.
             int person = record[j].p;
@@ -61,7 +61,7 @@ int main() {
             bool is_sick = false; //이걸로 아픈 사람이 있으면 가능성이 있는 것.
 
             for(int k = 0; k < d; k++) {
-                if(cheese[k].p == person && cheese[k].m == i && cheese[k].t < time) {
+                if(cheese[k].p + 1 == person + 1 && cheese[k].m + 1 == i + 1 && cheese[k].t < time) {
                     is_sick = true;
                 }
             }
@@ -71,11 +71,15 @@ int main() {
                 break;
             }
         }
+        
+        if(is_rotten == false) {
+            continue;
+        }
 
         for(int l = 0; l < d; l++) {
-            if(cheese[l].m == i && count_person[cheese[l].p] == 0) {
+            if(cheese[l].m == i && count_person[cheese[l].p + 1] == 0) {
                 count++;
-                count_person[cheese[l].p] = 1;
+                count_person[cheese[l].p + 1] = 1;
             }
         }
         max_count = max(max_count, count);
