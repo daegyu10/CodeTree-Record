@@ -62,7 +62,7 @@ int main() {
         }
 
         int count = 0;
-        int ate_person[n] = {}; //일단 상한건 알겠다. 그러면? 이 치즈 먹은 사람을 싹 다 카운트 하면 된다. 단 1번만.
+        int ate_person[n+1] = {}; //일단 상한건 알겠다. 그러면? 이 치즈 먹은 사람을 싹 다 카운트 하면 된다. 단 1번만.
         for(int j = 0; j < d; j++) {
             if(cheese[j].m == i && ate_person[cheese[j].p] == 0) {
                 count++;
