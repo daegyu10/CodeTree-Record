@@ -40,17 +40,24 @@ int main() {
     Record record[50];
 
     for(int i = 0; i < d; i++) {
-        cin >> cheese[i].p >> cheese[i].m >> cheese[i].t;
+        int p, t;
+
+        cin >> p >> cheese[i].m >> t;
+        cheese[i].p = p--;
+        cheese[i].t = t--;
     }
 
     for(int i = 0; i < s; i++) {
-        cin >> record[i].p >> record[i].t;
+        int p, t;
+        cin >> p >> t;
+        record[i].p = p--;
+        record[i].t = t--;
     }
 
     //sort(cheese.begin(), cheese.end(), cmp); //sort가 필요할거라 생각하지 않음. 그냥 무식하게 다 완전탐색 하기 때문.
 
     int max_count = 0;
-    for(int i = 1; i <= m; i++) { //먼저 치즈 번호를 기준으로 반복문 돌린다.
+    for(int i = 0; i < m; i++) { //먼저 치즈 번호를 기준으로 반복문 돌린다.
         int count = 0;
         bool is_rotten = true; //현재 검사하는 치즈가 상했음을 간주하고 변수 마련. 이건 없어도 되나? 애초에 is_sick if문으로 이후의 연산 여부를 결정한다면 필요 없나?
         int count_person[n] = {}; //상한 치즈 먹은 사람 bool 카운트 용. 이거 카운트 한다.
