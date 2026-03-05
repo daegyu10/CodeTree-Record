@@ -36,7 +36,7 @@ int main() {
 
                 }
 
-                if(i_idx < j_idx) {
+                if(i_idx > j_idx) {
                     exist = false;
                     break;
                 }
