@@ -12,7 +12,7 @@ int main() {
     }
 
     int num = -1;
-    int max_num = 0;
+    int max_num = -1;
     for(int i = 0; i < n; i++) {
         for(int j = i+1; j < n; j++) {
             if(arr[i] == arr[j] && abs(i-j) <= k) {
