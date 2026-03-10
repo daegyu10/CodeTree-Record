@@ -26,10 +26,10 @@ int main() {
     int count = 0;
     for(int i = a; i <= b; i++) {
         int pos_now = i;
-        int s_dis_p = 1000;
-        int n_dis_p = 1000;
-        int s_dis_n = 1000;
-        int n_dis_n = 1000; //초기값 설정을 0으로 하면 당연히 s, n이 다 위치가 0으로 나온다. 최소 거리를 구해야하니 최대값으로 값을 줌.
+        int s_dis_p = 2000;
+        int n_dis_p = 2000;
+        int s_dis_n = 2000;
+        int n_dis_n = 2000; //초기값 설정을 0으로 하면 당연히 s, n이 다 위치가 0으로 나온다. 최소 거리를 구해야하니 최대값으로 값을 줌.
 
         int temp_s_n = 0;
         int temp_n_n = 0;
