@@ -35,7 +35,7 @@ int main() {
         int temp_n_n = 0;
         bool s_found = false;
         bool n_found = false; //왼쪽, 오른쪽으로 각각 1번씩 가보면서 s, n찾는다. 찾으면 bool true로 하고 위치 기록.
-        while(pos_now >= a) {
+        while(pos_now >= 1) {
             if(arr2[pos_now] == 'S' && s_found == false) {
                 s_dis_n = temp_s_n;
                 s_found = true;
@@ -59,7 +59,7 @@ int main() {
         int temp_n_p = 0;
         s_found = false;
         n_found = false;
-        while(pos_now <= b) {
+        while(pos_now <= 1000) {
             if(arr2[pos_now] == 'S' && s_found == false) {
                 s_dis_p = temp_s_p;
                 s_found = true;
