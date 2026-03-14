@@ -5,7 +5,7 @@ int main() {
     // Please write your code here.
     int n;
     cin >> n;
-    
+    int arr[4] = {};
     int a[100] = {};
     int b[100] = {};
     int c[100] = {};
@@ -17,7 +17,7 @@ int main() {
     }
 
     for(int i = 1; i <= 3; i++) {
-        int arr[4] = {}; //할때마다 배열 새로 만듬. 초기화를 위함.
+        arr[1] = arr[2] = arr[3] = 0;
         arr[i] = 1;
         int score = 0;
         for(int j = 0; j < n; j++) {
