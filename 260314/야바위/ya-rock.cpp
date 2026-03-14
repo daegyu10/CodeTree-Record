@@ -6,20 +6,26 @@ int main() {
     int n;
     cin >> n;
     int arr[4] = {};
+    int a[100] = {};
+    int b[100] = {};
+    int c[100] = {};
 
     int max_score = 0;
+
+    for(int j = 0; j < n; j++) {
+        cin >> a[j] >> b[j] >> c[j];
+    }
+
     for(int i = 1; i <= 3; i++) {
         arr[i] = 1;
         int score = 0;
         for(int j = 0; j < n; j++) {
-            int a, b, c;
-            cin >> a >> b >> c;
 
-            int temp = arr[a];
-            arr[a] = arr[b];
-            arr[b] = temp;
+            int temp = arr[a[j]];
+            arr[a[j]] = arr[b[j]];
+            arr[b[j]] = temp;
 
-            if(arr[c] == 1) {
+            if(arr[c[j]] == 1) {
                 score++;
             }
         }
