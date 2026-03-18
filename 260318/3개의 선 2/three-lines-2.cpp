@@ -26,34 +26,39 @@ int main() {
                 int passed = 0;
 
                 for(int l = 0; l < n; l++) {
+                    bool pass = false;
                     if((i/11) == 0) {
                         if(x[l] == i%11) {
-                            passed++;
+                            pass = true;
                         }
                     } else {
                         if(y[l] == i%11) {
-                            passed++;
+                            pass = true;
                         }
                     }
 
                     if((j/11) == 0) {
                         if(x[l] == j%11) {
-                            passed++;
+                            pass = true;
                         }
                     } else {
                         if(y[l] == j%11) {
-                            passed++;
+                            pass = true;
                         }
                     }
 
                     if((k/11) == 0) {
                         if(x[l] == k%11) {
-                            passed++;
+                            pass = true;
                         }
                     } else {
                         if(y[l] == k%11) {
-                            passed++;
+                            pass = true;
                         }
+                    }
+
+                    if(pass == true) {
+                        passed++;
                     }
                 }
 
