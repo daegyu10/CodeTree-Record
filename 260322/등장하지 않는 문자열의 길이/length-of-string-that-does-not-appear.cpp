@@ -27,7 +27,8 @@ int main() {
                 str += arr[k];
             }
 
-            if(line.find(str, j+1) != string::npos) {
+            if(line.find(str, j+1) != string::npos) { //그냥 시작점 j부터 잡으면 자기 자신을 잡아버림. 그렇다고 j+i로 하면 10번째 테스트 케이스를 못잡음.
+            //그래서 j+1. 목표 문자열 바로 다음 인덱스부터 검사.
                 exist = true;
                 break;
             }
