@@ -27,7 +27,7 @@ int main() {
                 str += arr[k];
             }
 
-            if(line.find(str, i) != string::npos) {
+            if(line.find(str, j+1) != string::npos) {
                 exist = true;
                 break;
             }
