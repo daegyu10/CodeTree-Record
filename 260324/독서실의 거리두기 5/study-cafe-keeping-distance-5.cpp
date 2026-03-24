@@ -22,12 +22,14 @@ int main() {
         }
 
         if(possible) {
+            int encounter = 0;
             int dist_v = 1000;
             int dist = 0;
             for(int j = 0; j < n; j++) {
                 if(arr[j] == 1) {
+                    encounter++;
                     dist++;
-                    if(j != 0) {
+                    if(encounter >= 2) {
                         dist_v = min(dist_v, dist);
                     }
                     
