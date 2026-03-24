@@ -11,7 +11,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         cin >> arr1[i] >> arr2[i];
     }
-    for(int i = 1; i < 1000; i++) { //첫 시작 수.
+    for(int i = 1; i < 10000; i++) { //첫 시작 수.
         int work = i;
         for(int j = 0; j < n; j++) {
             work *= 2;
