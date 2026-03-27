@@ -15,9 +15,11 @@ int main() {
 
     int max_count = 0;
     for(int i = 0; i < n; i++) {
-        int count = 0; //스스로를 골랐으니 count는 1.
+        int count = 1;
+        //지금 고른 값을 최소값으로 한다. 그러면? 다음 수는 고른값 변동범위 내에서 있어야한다.
+
         for(int j = 0; j < n; j++) { //수를 다 골라본다. 1,2,3,4,5. 이 상태에서 3을 기준으로 4,5 하는거랑 5를 기준으로 보는거랑 다를 수 있음.
-            if((i != j) &&(abs(arr[i]-arr[j]) <= k)) { //스스로가 아니고 k 이하면 플러스.
+            if((i!=j) && (arr[i] <= arr[j]) && (arr[j] <= arr[i]+k)) {
                 count++;
             }
         }
