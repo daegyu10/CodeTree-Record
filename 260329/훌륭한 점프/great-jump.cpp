@@ -18,8 +18,8 @@ bool Possible(int a) {
         }
     }
 
-    for(int i = 0; i < count; i++) {
-        int distance = indexes[i+1] - indexes[i];
+    for(int i = 1; i < count; i++) {
+        int distance = indexes[i] - indexes[i-1];
         if(distance > k) {
             return false;
         }
