@@ -2,6 +2,7 @@
 using namespace std;
 
 int n, k;
+int arr[n];
 
 bool Possible(int a) {
     int count = 0;
