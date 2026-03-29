@@ -39,10 +39,10 @@ int main() {
 
     //조건을 어떻게 해야할끼? 일단 최대값을 구하고. 그거에서 최소값을 구하고. 그 와중에서 거리를 봐야한다.
     //아까 개념대로, 정답을 가정해보자. 
-    int minmax = 100000;
+    int minmax = 0;
     for(int i = 1; i <= max_count; i++) {
         if(Possible(i)) {
-            minmax = min(minmax, i);
+            minmax = max(minmax, i);
         }
     }
 
