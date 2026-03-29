@@ -2,7 +2,7 @@
 using namespace std;
 
 int n, k;
-int arr[n];
+int arr[100] = {}; //수 100개 주어지니까 최대치 선언함.
 
 bool Possible(int a) {
     int count = 0;
