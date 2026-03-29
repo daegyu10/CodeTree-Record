@@ -7,15 +7,19 @@ int arr[100] = {}; //수 100개 주어지니까 최대치 선언함.
 bool Possible(int a) {
     int count = 0;
     int indexes[n] = {};
+    
+    if(arr[0] >= a || arr[n-1] >= a) {
+        return false;
+    }
 
     for(int i = 0; i < n; i++) {
-        if(arr[i] >= a) {
+        if(arr[i] <= a) {
             indexes[count++] = i;
         }
     }
 
-    for(int i = 1; i < count; i++) {
-        int distance = indexes[i] - indexes[i-1];
+    for(int i = 0; i < count; i++) {
+        int distance = indexes[i+1] - indexes[i];
         if(distance > k) {
             return false;
         }
@@ -39,13 +43,11 @@ int main() {
 
     //조건을 어떻게 해야할끼? 일단 최대값을 구하고. 그거에서 최소값을 구하고. 그 와중에서 거리를 봐야한다.
     //아까 개념대로, 정답을 가정해보자. 
-    int minmax = 0;
-    int answer = 1000;
+    int minmax = 1000;
     for(int i = 1; i <= max_count; i++) {
         if(Possible(i)) {
-            minmax = max(minmax, i);
+            minmax = min(minmax, i);
         }
-        answer = min(answer, minmax);
     }
 
     cout << minmax;
