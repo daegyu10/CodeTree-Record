@@ -8,7 +8,7 @@ bool Possible(int a) {
     int count = 0;
     int indexes[n] = {};
     
-    if(arr[0] >= a || arr[n-1] >= a) {
+    if(arr[0] > a || arr[n-1] > a) {
         return false;
     }
 
