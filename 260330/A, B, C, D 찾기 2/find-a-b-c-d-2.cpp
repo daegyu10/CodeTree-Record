@@ -21,7 +21,7 @@ int main() {
     arr[0] = 0;
     arr[1] = 0;
 
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 15; i++) {
         if(arr[i] == temp) {
             arr[i] = 0;
         }
