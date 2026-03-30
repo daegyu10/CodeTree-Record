@@ -24,6 +24,7 @@ int main() {
     for(int i = 0; i < 15; i++) {
         if(arr[i] == temp) {
             arr[i] = 0;
+            break;
         }
     }
 
