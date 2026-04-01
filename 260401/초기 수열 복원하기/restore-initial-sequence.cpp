@@ -28,6 +28,8 @@ int main() {
             c = arr1[j] - minus;
             if(index[c] == true) {
                 break;
+            } else if(c < 1) {
+                break;
             } else {
                 index[c] = true;
                 minus = c;
