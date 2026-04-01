@@ -14,7 +14,7 @@ int main() {
 
     int a, b; //처음 숫자 특정하기 위함임.
 
-    for(int i = 1; i < n-1; i++) {
+    for(int i = 1; i <= n-1; i++) {
         a = i;
         b = arr1[0] - a;
         bool index[n+1] = {};
@@ -24,14 +24,14 @@ int main() {
 
         int minus = b;
         bool exist = false;
-        for(int j = 1; j <= n-1; j++) {
+        for(int j = 1; j < n-1; j++) {
             c = arr1[j] - minus;
             if(index[c] == true) {
                 break;
             } else {
                 index[c] = true;
                 minus = c;
-                if(j == n-1) {
+                if(j == n-2) {
                     exist = true;
                 }
             }
