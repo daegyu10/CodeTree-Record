@@ -8,7 +8,7 @@ int main() {
     int arr[n] = {};
     int arr1[n-1] = {};
     
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n-1; i++) {
         cin >> arr1[i];
     }
 
@@ -17,7 +17,8 @@ int main() {
     for(int i = 1; i <= n-1; i++) {
         a = i;
         b = arr1[0] - a;
-        bool index[n+1] = {};
+
+        bool index[2*n] = {}; //arr1에서는 두 수의 합이 나온다. n이 100이고, 75, 74 나오면 합은 149나옴. 완전 커버하려면 2n은 되어야함.
         int c;
         index[a] = true;
         index[b] = true; //i는 a값을 정하기 위함임. for문 반복용. 그 용도로만 씀.
@@ -26,7 +27,7 @@ int main() {
         bool exist = false;
         for(int j = 1; j < n-1; j++) {
             c = arr1[j] - minus;
-            if(index[c] == true) {
+            if(index[c] == true || c < 1) {
                 break;
             } else if(c < 1) {
                 break;
