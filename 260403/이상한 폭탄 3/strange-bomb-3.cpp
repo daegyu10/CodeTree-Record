@@ -30,6 +30,7 @@ int main() {
                     first = true;
                     idx = 0;
                 } else {
+                    idx++;
                     if(idx <= k) {
                         explode++;
                         idx = 0;
