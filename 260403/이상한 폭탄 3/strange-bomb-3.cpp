@@ -16,7 +16,7 @@ int main() {
             index[arr[i]] = true;
         }
     }
-
+    int result = 0;
     int explode_max = 0;
     for(int i = 0; i < count; i++) {
         int target = index2[i];
@@ -43,9 +43,12 @@ int main() {
 
         }
 
-        explode_max = max(explode_max, explode);
+        if(explode_max < explode) {
+            explode_max = explode;
+            result = target;
+        }
     }
-    cout << explode_max;
+    cout << result;
 
     return 0;
 }
