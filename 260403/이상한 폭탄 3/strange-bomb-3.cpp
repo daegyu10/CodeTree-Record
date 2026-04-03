@@ -33,6 +33,8 @@ int main() {
                     if(idx <= k) {
                         explode++;
                         idx = 0;
+                    } else {
+                        idx = 0;
                     }
                 }
             } else {
