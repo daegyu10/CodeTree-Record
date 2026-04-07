@@ -14,6 +14,9 @@ int main() {
         int count = 0;
         int sector_count = 0;
         for(int j = 0; j < n-1; j++) {
+            if(arr[j] > i) {
+                break;
+            }
             count += arr[j];
             if(count + arr[j+1] > i) {
                 count = 0;
