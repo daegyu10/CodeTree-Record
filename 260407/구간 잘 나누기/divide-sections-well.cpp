@@ -29,7 +29,7 @@ int main() {
             }
         }
 
-        if(exist == true && sector_count == m-1) {
+        if(exist == true && sector_count <= m-1) {
             cout << i;
             return 0;
         }
