@@ -14,14 +14,14 @@ int main() {
         int count = 0;
         int sector_count = 0;
         bool exist = true;
-        for(int j = 0; j < n-1; j++) {
+        for(int j = 0; j < n; j++) {
             if(arr[j] > i) {
                 exist = false;
                 break;
             }
             count += arr[j];
-            if(count + arr[j+1] > i) {
-                count = 0;
+            if(count > i) {
+                count = arr[j];
                 sector_count++;
             }
             if(sector_count > m-1) {
