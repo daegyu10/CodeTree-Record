@@ -29,6 +29,7 @@ int main() {
         result = 0;
     } else {
         while(max_now != max_n) {
+            cost = 0;
             for(int i = 0; i < n; i++) {
                 if(arr[i] < min_now) {
                     cost += abs(arr[i] - min_now);
