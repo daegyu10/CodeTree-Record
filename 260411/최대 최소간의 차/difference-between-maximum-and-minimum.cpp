@@ -24,8 +24,8 @@ int main() {
     int result = 0;
 
     int min_now = min_n;
-    int max_now = min_n+2;
-    if(abs(max_n - min_n) <= 2) {
+    int max_now = min_n+k;
+    if(abs(max_n - min_n) <= k) {
         result = 0;
     } else {
         while(max_now != max_n) {
