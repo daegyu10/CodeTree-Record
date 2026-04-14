@@ -3,21 +3,13 @@ using namespace std;
 
 int main() {
     // Please write your code here.
-    bool arr[101] = {};
-    int a, b;
-    for(int i = 0; i <= 1; i++) {
-        cin >> a >> b;
-        for(int j = a+1; j <= b; j++) {
-            arr[j] = true;
-        }
-    }
-
+    int x1, x2, a1, a2;
+    cin >> x1 >> x2 >> a1 >> a2;
     int count = 0;
-    for(int i = 1; i < 101; i++) {
-        if(arr[i] == true) {
-            count++;
-        }
+    if(x2 < a1 || a2 < x1) {
+        count = (x2 - x1) + (a2 - a1);
+    } else {
+        count = max(x2, a2) - min(x1, a1);
     }
     cout << count;
-    return 0;
 }
