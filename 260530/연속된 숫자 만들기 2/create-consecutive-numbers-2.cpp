@@ -18,7 +18,7 @@ int main() {
         } else {
             int diff1 = abs(arr[0] - arr[1]);
             int diff2 = abs(arr[1] - arr[2]);
-            if(diff1 > diff2) {
+            if(diff1 >= diff2) {
                 arr[0] = arr[2] - 1;
                 sort(arr, arr+3);
                 move++;
@@ -30,7 +30,7 @@ int main() {
                     cout << move+1;
                     return 0;
                 }
-            } else if (diff1 < diff2){
+            } else if (diff1 <= diff2){
                 arr[2] = arr[0] + 1;
                 sort(arr, arr+3);
                 move++;
